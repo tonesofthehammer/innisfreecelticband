@@ -39,7 +39,7 @@ body{
     background-color: rgb(1, 84, 1);
     min-height: 824px;
     display: flexbox;
-    background-image: url("/Users/dannysmartmusic/HTML/Innisfree Website/images/HEADER IMAGE.jpg");
+    background-image: url("images/HEADER IMAGE.jpg");
     background-size: cover;
 }
 
