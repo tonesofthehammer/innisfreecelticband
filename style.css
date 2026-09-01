@@ -190,3 +190,14 @@ body{
     a:visited {color:black};
     a:hover {color:rgb(1, 84, 1)};
 }
+
+
+@media screen and (max-width: 768px) {
+  .homepage-header {
+    flex-direction: column;
+  }
+  
+  body {
+    font-size: 16px; 
+  }
+}
