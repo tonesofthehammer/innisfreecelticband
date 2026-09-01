@@ -10,6 +10,11 @@ html {
   font-display: swap;
 }
 
+@font-face {
+    font-family: "Fraunces";
+    src: url("fonts/Fraunces_9pt-Regular.ttf")format("woff2");
+}
+
 @keyframes expand {
     from {
         transform: scale(0);
@@ -97,6 +102,7 @@ body{
     padding-left: 300px;
     font-size: 25px;
     color:rgb(212, 202, 188);
+    font-family: "Fraunces";
     animation: expand 1.2s ease-out;
 }
 
@@ -179,6 +185,7 @@ body{
     display:flex;
     justify-content: center;
     padding-top: 0px;
+    font-family: "Fraunces";
     a:link {color:black};
     a:visited {color:black};
     a:hover {color:rgb(1, 84, 1)};
