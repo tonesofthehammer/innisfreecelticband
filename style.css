@@ -1,0 +1,185 @@
+html {
+    scroll-behavior:smooth;
+}
+
+@font-face {
+  font-family: "phantasmagoria";
+  src: url("/Users/dannysmartmusic/HTML/Innisfree Website/fonts/phantasmagoria.otf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    color:antiquewhite;
+
+}
+
+body{
+    background-color: rgb(0, 68, 0);
+    margin: 0%;
+    font-family: "phantasmagoria", sans-serif;
+}
+
+.homepage-header {
+    background-color: rgb(1, 84, 1);
+    min-height: 824px;
+    display: flexbox;
+    background-image: url("/Users/dannysmartmusic/HTML/Innisfree Website/images/HEADER IMAGE.jpg");
+    background-size: cover;
+}
+
+
+
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    width: 250px;
+    z-index: 10;
+    padding-bottom: 0%;
+    z-index: 2;
+
+    animation: expand 1.2s ease-out;
+}
+
+.main-nav{
+   
+    font-size: 35px;
+    word-spacing: 20px;
+    position:absolute;
+    margin-left: 500px;
+    margin-top: 124px;
+    color:rgb(1, 84, 1);
+    a:link {color:black};
+    a:visited {color:black};
+    a:hover {color:rgb(1, 84, 1)};
+    z-index: 3;
+    animation: expand 1.2s ease-out;
+}
+
+.separator {
+    color: black;
+}
+
+
+.about-section {
+    display: flex;
+    height: 653px;
+    a:link {color:antiquewhite};
+    a:visited {color:antiquewhite};
+    a:hover {color:rgb(0, 0, 0)};
+}
+
+.about-section h1 {
+    font-size: 100px;
+    padding-left: 300px;
+    padding-top:100px;
+    animation: expand 1.2s ease-out;
+}
+.about-section p {
+    position: absolute;
+    padding-top: 270px;
+    padding-left: 300px;
+    font-size: 25px;
+    color:rgb(212, 202, 188);
+    animation: expand 1.2s ease-out;
+}
+
+
+
+.about-section img {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 720px;
+    padding: 0%;
+}
+
+.music-section {
+    padding: 0px;
+    background-color: antiquewhite;
+    width: 100%;
+    min-height: 700px;
+}
+
+.music-section h1 {
+    display:flex;
+    justify-content: center;
+    font-size: 100px;
+    color: darkgreen;
+
+    padding-top: 100px;
+    animation: expand 1.2s ease-out;
+}
+
+.youtube-video {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    animation: expand 1.2s ease-out;
+
+}
+
+.spotify {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    animation: expand 1.2s ease-out;
+
+}
+
+.shows-section {
+    background-color: rgb(1, 84, 1);
+    width: 100%;
+    min-height: 700px;
+    padding-top:100px;
+}
+
+.shows-section h1 {
+    display:flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-size: 100px;
+    animation: expand 1.2s ease-out;
+}
+
+
+.contact-section {
+    background-color: antiquewhite;
+    min-height: 700px;
+    font-size: 50px;
+    animation: expand 1.2s ease-out;   
+    padding-top:100px;
+}
+
+.contact-section h1 {
+    color:rgb(1, 84, 1);
+    display:flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.contact-section a{
+    color:rgb(1, 84, 1);
+    display:flex;
+    justify-content: center;
+    padding-top: 0px;
+    a:link {color:black};
+    a:visited {color:black};
+    a:hover {color:rgb(1, 84, 1)};
+}
