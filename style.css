@@ -4,7 +4,7 @@ html {
 
 @font-face {
   font-family: "phantasmagoria";
-  src: url("fonts/phantasmagoria.otf") format("woff2");
+  src: url("/Users/dannysmart/Documents/HTML/Innisfree Website/fonts/phantasmagoria.otf") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@ html {
 
 @font-face {
     font-family: "Fraunces";
-    src: url("fonts/Fraunces_9pt-Regular.ttf")format("woff2");
+    src: url("/Users/dannysmart/Documents/HTML/Innisfree Website/fonts/Fraunces_9pt-Regular.ttf")format("woff2");
 }
 
 @keyframes expand {
@@ -44,7 +44,7 @@ body{
     background-color: rgb(1, 84, 1);
     min-height: 824px;
     display: flexbox;
-    background-image: url("images/HEADER IMAGE.jpg");
+    background-image: url("/Users/dannysmart/Documents/HTML/Innisfree Website/images/HEADER IMAGE.jpg");
     background-size: cover;
 }
 
@@ -185,19 +185,265 @@ body{
     display:flex;
     justify-content: center;
     padding-top: 0px;
-    font-family: "Fraunces";
     a:link {color:black};
     a:visited {color:black};
     a:hover {color:rgb(1, 84, 1)};
 }
 
+@media  (max-width: 1440px) {
 
-@media screen and (max-width: 768px) {
+.homepage-header {
+    flex-direction: column;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    min-height:700px;
+    flex-direction: column; /* Stack layout elements vertically on mobile */
+  }
+
+.main-nav {
+    font-size: 30px;
+    word-spacing: 10px;
+}
+
+.about-section {
+    max-height: 500px;
+}
+
+.about-section img {
+    max-height: 567px;
+}
+
+.about-section h1 {
+    font-size: 70px;
+    padding-top: 90px;
+    padding-left: 150px;
+}
+
+.about-section p {
+    font-size: 20px;
+    padding-top: 220px;
+    padding-left: 150px;
+}
+
+.youtube-video {
+
+    max-height: 400px;
+    padding-left: 0px;
+    padding-top: 10px;
+
+}
+
+.contact-section {
+    max-height: 467px;
+}
+
+.contact-section h1 {
+    display: block;
+    text-align: center;
+    font-size: 60px;
+
+}
+.contact-section a {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+}
+
+
+
+@media  (max-width: 1024px) {
   .homepage-header {
     flex-direction: column;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    min-height:700px;
+    flex-direction: column; /* Stack layout elements vertically on mobile */
   }
+
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    width: 200px;
+
+}
   
+.main-nav {
+    flex-direction: column;
+    word-spacing: 10px;
+    font-size: 20px;
+    margin-left: 360px;
+    margin-top: 110px;
+    }
+
+
+.about-section {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 15.1%;
+    max-height: 200px;
+}
+
+.about-section img {
+    position: absolute;
+    max-height: 60%;
+}
+
+
+.about-section h1 {
+    font-size: 50px;
+    padding-right: 35%;
+    padding-left: 0%;
+    padding-top: 5%;
+    color:antiquewhite;
+}
+
+.about-section p {
+    position: absolute;
+    margin-left: -20%;
+    margin-top: -10%;
+    font-size: 15px;
+    color:rgb(212, 202, 188);
+    font-family: "Fraunces";
+}
+
   body {
-    font-size: 16px; 
+    font-size: 16px; /* Optimize typography for readability */
   }
+
+  .music-section h1 {
+    font-size: 50px;
+    padding-top:10%;
+    padding-left: 0px;
+    padding-bottom: 10%;
+    color:rgb(1, 84, 1);
+}
+
+.youtube-video {
+
+    max-height: 300px;
+    padding-left: 0px;
+    padding-top: 10px;
+
+}
+
+.shows-section {
+    font-size: 50px;
+    padding-top:0%;
+    padding-bottom:0%;
+}
+
+.shows-section h1
+
+
+
+.contact-section h1 {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+
+}
+
+.contact-section a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+}
+
+
+@media (max-width: 600px) {
+    .homepage-header {
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    min-height:400px;
+    flex-direction: column;
+
+}
+
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+
+}
+
+.main-nav {
+        flex-direction: column;
+        font-size: 10px;
+        margin-left: 0px;
+    }
+
+.about-section {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 50%;
+
+
+}
+
+.about-section h1 {
+    font-size: 50px;
+    padding-top:120%;
+    padding-left: 0px;
+    color:antiquewhite;
+}
+
+.about-section img {
+    position: absolute;
+    max-height: 60%;
+}
+
+.about-section p {
+    position: absolute;
+    padding-top: 140%;
+    padding-left: 0px;
+    font-size: 15px;
+    color:rgb(212, 202, 188);
+    font-family: "Fraunces";
+}
+
+.music-section h1 {
+    font-size: 50px;
+    padding-top:10%;
+    padding-left: 0px;
+    padding-bottom: 10%;
+    color:rgb(1, 84, 1);
+}
+
+.youtube-video {
+
+    max-height: 200px;
+    padding-left: 0px;
+    padding-top: 10px;
+
+}
+
+.shows-section {
+    font-size: 50px;
+    padding-top:0%;
+    padding-left: 0px;
+}
+
+.shows-section h1{  
+
+
+
+.contact-section h1 {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+
+}
+.contact-section a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
 }
