@@ -7,7 +7,7 @@ html {
 
 @font-face {
   font-family: "phantasmagoria";
-  src: url("/Users/dannysmart/Documents/HTML/Innisfree Website/fonts/phantasmagoria.otf") format("woff2");
+  src: url("fonts/phantasmagoria.otf") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@ html {
 
 @font-face {
     font-family: "Fraunces";
-    src: url("/Users/dannysmart/Documents/HTML/Innisfree Website/fonts/Fraunces_9pt-Regular.ttf")format("woff2");
+    src: url("fonts/Fraunces_9pt-Regular.ttf")format("woff2");
 }
 
 
@@ -64,7 +64,7 @@ body {
     background-color: rgb(1, 84, 1);
     min-height: 824px;
     display: flexbox;
-    background-image: url("/Users/dannysmart/Documents/HTML/Innisfree Website/images/HEADER IMAGE.jpg");
+    background-image: url("images/HEADER IMAGE.jpg");
     background-size: cover;
 }
 
