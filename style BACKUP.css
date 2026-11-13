@@ -1,0 +1,197 @@
+html {
+    scroll-behavior:smooth;
+}
+
+@font-face {
+  font-family: "phantasmagoria";
+  src: url("/Users/dannysmartmusic/HTML/Innisfree Website/fonts/phantasmagoria.otf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("/Users/dannysmartmusic/HTML/Innisfree Website/fonts/Fraunces_9pt-Regular.ttf")format("woff2");
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    color:antiquewhite;
+
+}
+
+body{
+    background-color: rgb(0, 68, 0);
+    margin: 0%;
+    font-family: "phantasmagoria", sans-serif;
+}
+
+.homepage-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    align-items:top;
+    background-color: rgb(1, 84, 1);
+    min-height: 824px;
+    display: flexbox;
+    background-image: url("/Users/dannysmartmusic/HTML/Innisfree Website/images/HEADER IMAGE.jpg");
+    background-size: cover;
+}
+
+
+
+.header-logo {
+    margin-top: 50px;
+    width: 250px;
+    padding-top:10px;
+    z-index: 10;
+    z-index: 2;
+    animation: expand 1.2s ease-out;
+}
+
+.main-nav{
+    margin-top: 170px;
+    font-size: 35px;
+    word-spacing: 20px;
+    color:rgb(1, 84, 1);
+    a:link {color:black};
+    a:visited {color:black};
+    a:hover {color:rgb(1, 84, 1)};
+    z-index: 3;
+    animation: expand 1.2s ease-out;
+}
+
+.separator {
+    color: black;
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: 600px;
+    a:link {color:antiquewhite};
+    a:visited {color:antiquewhite};
+    a:hover {color:rgb(0, 0, 0)};
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-right: 200px;
+}
+
+.about-section h1 {
+    font-size: 100px;
+    animation: expand 1.2s ease-out;
+}
+.about-section p {
+    
+    font-size: 25px;
+    color:rgb(212, 202, 188);
+    font-family: "Fraunces";
+    animation: expand 1.2s ease-out;
+}
+
+
+
+.about-section img {
+    height:600px;
+}
+
+.music-section {
+    padding: 0px;
+    background-color: antiquewhite;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-section h1 {
+    font-size: 100px;
+    color: darkgreen;
+
+    padding-top: 100px;
+    animation: expand 1.2s ease-out;
+}
+
+.youtube-video {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    animation: expand 1.2s ease-out;
+
+}
+
+.spotify {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    animation: expand 1.2s ease-out;
+
+}
+
+.shows-section {
+    background-color: rgb(1, 84, 1);
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid antiquewhite;
+
+}
+
+.shows-section h1 {
+    color: antiquewhite;
+    font-size: 100px;
+    animation: expand 1.2s ease-out;
+}
+
+
+.contact-section {
+    background-color: antiquewhite;
+    min-height: 700px;
+    font-size: 50px;
+    animation: expand 1.2s ease-out;   
+    padding-top:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-section h1 {
+    color:rgb(1, 84, 1);
+}
+
+.contact-section a{
+    color:rgb(1, 84, 1);
+    a:link {color:black};
+    a:visited {color:black};
+    a:hover {color:rgb(1, 84, 1)};
+}
+
+
+
