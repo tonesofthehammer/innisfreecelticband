@@ -1,28 +1,59 @@
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
-/*-------- FONTS ---------->*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    background-color: rgb(1, 84, 1);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   FONTS
+   ========================================================= */
 
 @font-face {
-  font-family: "phantasmagoria";
-  src: url("fonts/phantasmagoria.otf") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "phantasmagoria";
+    src: url("fonts/phantasmagoria.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Fraunces";
-    src: url("fonts/Fraunces_9pt-Regular.ttf")format("woff2");
+    src: url("fonts/Fraunces_9pt-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 
- 
-/*-------- ANIMATION ---------->*/
-
-
+/* =========================================================
+   ANIMATION
+   ========================================================= */
 
 @keyframes expand {
     from {
@@ -34,66 +65,84 @@ html {
     }
 }
 
-a {
-    text-decoration: none;
-}
 
-/*-------- MAIN ---------->*/
-
-
+/* =========================================================
+   GENERAL TYPOGRAPHY
+   ========================================================= */
 
 h1 {
-    font-family: "phantasmagoria";
-    color: antiquewhite;
-}
-
-nav {
+    margin: 0;
     font-family: "phantasmagoria";
 }
 
-body {
-    background-color: rgb(1, 84, 1);
-    margin: 0px;
+p {
+    margin: 0;
 }
 
 
-/*-------- HEADER ---------->*/
-
+/* =========================================================
+   HEADER / HERO
+   ========================================================= */
 
 .homepage-header {
+    position: relative;
+
+    width: 100%;
+    min-height: 70svh;
+
     background-color: rgb(1, 84, 1);
-    min-height: 824px;
-    display: flexbox;
     background-image: url("images/HEADER IMAGE.jpg");
     background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 25px 20px 40px;
 }
 
+
+/* Logo */
 
 .header-logo {
-    position: absolute;
-    top: 20px;
-    left: 200px;
-    width: 250px;
-    z-index: 10;
-    padding-bottom: 0%;
-    z-index: 2;
+    width: clamp(140px, 20vw, 250px);
 
     animation: expand 1.2s ease-out;
 }
 
-.main-nav{
-   
-    font-size: 35px;
-    word-spacing: 20px;
-    position:absolute;
-    margin-left: 500px;
-    margin-top: 124px;
-    color:rgb(1, 84, 1);
-    a:link {color:black};
-    a:visited {color:black};
-    a:hover {color:rgb(1, 84, 1)};
-    z-index: 3;
+
+/* Navigation */
+
+.main-nav {
+    padding-top: 74px;
+    padding-left: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: "phantasmagoria";
+    font-size: clamp(18px, 2.5vw, 35px);
+
+
     animation: expand 1.2s ease-out;
+}
+
+.main-nav a {
+    color: black;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:visited {
+    color: black;
+}
+
+.main-nav a:hover {
+    color: rgb(1, 84, 1);
 }
 
 .separator {
@@ -101,433 +150,448 @@ body {
 }
 
 
-/*-------- ABOUT ---------->*/
-
-
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about-section {
-    display: flex;
-    height: 653px;
-    a:link {color:antiquewhite};
-    a:visited {color:antiquewhite};
-    a:hover {color:rgb(0, 0, 0)};
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    background-color: rgb(1, 84, 1);
 
-.about-section h1 {
-    font-size: 100px;
-    padding-left: 300px;
-    padding-top:100px;
-    animation: expand 1.2s ease-out;
-}
-.about-section p {
-    position: absolute;
-    padding-top: 270px;
-    padding-left: 300px;
-    font-size: 25px;
-    color:rgb(212, 202, 188);
-    font-family: "Fraunces";
-    animation: expand 1.2s ease-out;
+    padding: 60px 20px;
 }
 
 
+/* About image */
 
 .about-section img {
-    display: flex;
-    position: absolute;
-    right: 0px;
-    height: 720px;
-    padding: 0%;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+
+    margin: 0 ;
+
+    justify-content: right;
 }
 
 
-/*-------- MUSIC ---------->*/
+/* About content */
+
+.about-section h1 {
+    color: antiquewhite;
+
+    font-size: clamp(50px, 9vw, 100px);
+
+    text-align: center;
+
+    margin-top: 45px;
+
+    animation: expand 1.2s ease-out;
+}
+
+.about-section p {
+    max-width: 700px;
+
+    margin: 25px auto 0;
+
+    color: rgb(212, 202, 188);
+
+    font-family: "Fraunces";
+    font-size: clamp(17px, 2vw, 20px);
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    animation: expand 1.2s ease-out;
+}
+
+.about-section p a {
+    color: antiquewhite;
+}
+
+.about-section p a:visited {
+    color: antiquewhite;
+}
+
+.about-section p a:hover {
+    color: black;
+}
 
 
+/* =========================================================
+   MUSIC
+   ========================================================= */
 
 .music-section {
-    padding: 0px;
-    background-color: antiquewhite;
     width: 100%;
-    min-height: 700px;
+
+    background-color: antiquewhite;
+
+    padding: 70px 20px 100px;
 }
 
 .music-section h1 {
-    display:flex;
-    justify-content: center;
-    font-size: 100px;
-    color: darkgreen;
+    color: rgb(1, 84, 1);
 
-    padding-top: 100px;
+    font-size: clamp(50px, 9vw, 100px);
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
     animation: expand 1.2s ease-out;
 }
+
+
+/* YouTube */
 
 .youtube-video {
     display: block;
-    margin: 0 auto;
-    padding-bottom: 100px;
-    animation: expand 1.2s ease-out;
 
+    width: min(100%, 900px);
+    aspect-ratio: 16 / 9;
+
+    height: auto;
+
+    margin: 0 auto 60px;
+
+    border: 0;
+
+    animation: expand 1.2s ease-out;
 }
+
+
+/* Spotify */
 
 .spotify {
     display: block;
-    margin: 0 auto;
-    padding-bottom: 100px;
-    animation: expand 1.2s ease-out;
 
+    width: min(100%, 900px);
+    height: 352px;
+
+    margin: 0 auto;
+
+    border: 0;
+
+    animation: expand 1.2s ease-out;
 }
 
 
-/*-------- SHOWS ---------->*/
-
+/* =========================================================
+   SHOWS
+   ========================================================= */
 
 .shows-section {
-    background-color: rgb(1, 84, 1);
     width: 100%;
-    min-height: 700px;
-    padding-top:100px;
+
+    background-color: rgb(1, 84, 1);
+
+    padding: 70px 20px 100px;
+
+    min-height: 600px;
 }
 
 .shows-section h1 {
-    display:flex;
-    justify-content: center;
     color: antiquewhite;
-    font-size: 100px;
+
+    font-size: clamp(50px, 9vw, 100px);
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
     animation: expand 1.2s ease-out;
 }
 
 
+/*
+   Prevent Bandsintown widget from causing
+   horizontal scrolling.
+*/
 
-/*-------- CONTACT ---------->*/
+.shows-section > div {
+    width: min(100%, 1000px);
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
 
 
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-section {
+    width: 100%;
+
+    min-height: 600px;
+
     background-color: antiquewhite;
-    min-height: 700px;
-    font-size: 50px;
-    animation: expand 1.2s ease-out;   
-    padding-top:100px;
-}
 
-.contact-section h1 {
-    color:rgb(1, 84, 1);
-    display:flex;
-    justify-content: center;
-    padding-top: 200px;
-}
+    padding: 100px 20px;
 
-.contact-section a{
-    color:rgb(1, 84, 1);
-    display:flex;
-    justify-content: center;
-    padding-top: 0px;
-    a:link {color:black};
-    a:visited {color:black};
-    a:hover {color:rgb(1, 84, 1)};
-}
-
-
-/*-------- LARGE LAPTOP - 1440px ---------->*/
-
-
-@media  (max-width: 1440px) {
-
-.homepage-header {
+    display: flex;
     flex-direction: column;
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    min-height:700px;
-    flex-direction: column; /* Stack layout elements vertically on mobile */
-  }
+    justify-content: center;
+    align-items: center;
 
-.main-nav {
-    font-size: 30px;
-    word-spacing: 10px;
-}
+    text-align: center;
 
-.about-section {
-    max-height: 500px;
-}
-
-.about-section img {
-    max-height: 567px;
-}
-
-.about-section h1 {
-    font-size: 70px;
-    padding-top: 90px;
-    padding-left: 150px;
-}
-
-.about-section p {
-    font-size: 20px;
-    padding-top: 220px;
-    padding-left: 150px;
-}
-
-.youtube-video {
-
-    max-height: 400px;
-    padding-left: 0px;
-    padding-top: 10px;
-
-}
-
-.shows-section {
-    min-height: 400px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.contact-section {
-    max-height: 400px;
-    padding-top: 0%;
-    padding-bottom: 20%;
+    animation: expand 1.2s ease-out;
 }
 
 .contact-section h1 {
-    display: block;
-    text-align: center;
-    font-size: 60px;
+    color: rgb(1, 84, 1);
 
+    font-size: clamp(40px, 7vw, 75px);
 
+    margin-bottom: 25px;
 }
+
 .contact-section a {
-    display: block;
-    text-align: center;
-    font-size: 25px;
+    color: rgb(1, 84, 1);
+
+    font-family: "Fraunces";
+
+    font-size: clamp(18px, 3vw, 30px);
+
+    overflow-wrap: anywhere;
+
+    transition: color 0.2s ease;
 }
 
+.contact-section a:visited {
+    color: rgb(1, 84, 1);
+}
+
+.contact-section a:hover {
+    color: black;
 }
 
 
+/* =========================================================
+   TABLET
+   768px+
+   ========================================================= */
 
-/*-------- SMALL LAPTOP - 1024px ---------->*/
+@media (min-width: 768px) {
 
+    .homepage-header {
+        min-height: 75svh;
 
+        align-items: flex-start;
 
-@media  (max-width: 1024px) {
-  .homepage-header {
-    flex-direction: column;
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    min-height:700px;
-    flex-direction: column; /* Stack layout elements vertically on mobile */
-  }
+        padding: 30px 50px;
+    }
 
-.header-logo {
-    position: absolute;
-    top: 20px;
-    left: 120px;
-    width: 200px;
-
-}
-  
-.main-nav {
-    flex-direction: column;
-    word-spacing: 5px;
-    font-size: 22px;
-    margin-left: 360px;
-    margin-top: 110px;
+    .main-nav {
+        margin-top: -30px;
     }
 
 
-.about-section {
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 15.1%;
-    max-height: 200px;
-}
+    /* ABOUT */
 
-.about-section img {
-    position: absolute;
-    max-height: 58.1%;
-}
+    .about-section {
+        grid-template-columns: 1fr 1fr;
+
+        align-items: right;
+
+        min-height: 500px;
+
+        padding: 0%;
+    }
+
+    .about-section img {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+
+        width: 100%;
+        height: 100%;
+        max-height: 500px;
+
+        object-fit: cover;
+    }
+
+    .about-section h1 {
+        grid-column: 1;
+        grid-row: 1;
+
+        margin-top: 10%;
+        font-size: 50px;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .about-section p {
+        grid-column: 1;
+        grid-row: 2;
+
+        margin: 0;
+
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 14px;
+    }
 
 
-.about-section h1 {
-    font-size: 50px;
-    padding-right: 900px;
-    padding-left: 100px;
-    padding-top: 5%;
-    color:antiquewhite;
-}
+    /* MUSIC */
 
-.about-section p {
-    position: absolute;
-    margin-left: -5%;
-    margin-top: -6%;
-    font-size: 15px;
-    color:rgb(212, 202, 188);
-    font-family: "Fraunces";
-    text-align: left;
-}
+    .music-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
-  body {
-    font-size: 16px; 
-  }
 
-  .music-section {
+    /* CONTACT */
 
-    padding-bottom: 0%;
-  }
-  .music-section h1 {
-    font-size: 50px;
-    padding-top:10%;
-    padding-left: 0px;
-    color:rgb(1, 84, 1);
-}
-
-.youtube-video {
-
-    max-height: 300px;
-    padding-left: 0px;
-    padding-top: 0px;
-
-}
-
-.shows-section {
-    padding-bottom:0%;
-}
-
-.shows-section h1{
-    font-size: 50px;
-    padding-top: -20px;
-}
-
-.bit-widget-initializer {
-    padding-bottom: 300px;
-}
-
-.contact-section {
-    min-height: 300px;
-}
-
-.contact-section h1 {
-    font-size: 45px;
-    padding-bottom: 0px;
-
+    .contact-section {
+        min-height: 600px;
+    }
 }
 
 
-.contact-section a {
-    font-size: 25px;
+/* =========================================================
+   LAPTOP
+   1024px+
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .homepage-header {
+        min-height: 800px;
+
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .header-logo {
+        width: clamp(180px, 18vw, 250px);
+    }
+
+    .main-nav {
+        margin-top: -10px;
+        font-size: clamp(25px, 2.5vw, 35px);
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr);
+
+        min-height: 600px;
+
+    }
+
+    .about-section img {
+        max-height: 600px;
+    }
+
+    .about-section h1 {
+        font-size: clamp(30px, 9vw, 100px);
+        padding-left: 40px;
+        padding-top: 50px;
+    }
+
+    .about-section p {
+        max-width: 600px;
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+
+    /* MUSIC */
+
+    .music-section {
+        padding-top: 90px;
+        padding-bottom: 120px;
+    }
+
+    .youtube-video {
+        width: min(70vw, 900px);
+    }
+
+    .spotify {
+        width: min(70vw, 900px);
+    }
+
+
+    /* SHOWS */
+
+    .shows-section {
+        padding-top: 90px;
+        padding-bottom: 120px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+
+    .homepage-header {
+        min-height: 824px;
+
+        padding-left: max(100px, calc((100vw - 1300px) / 2));
+        padding-right: max(100px, calc((100vw - 1300px) / 2));
+    }
+
+    .main-nav {
+        margin-top: 30px;
+        font-size: clamp(25px, 2.5vw, 35px);
+    }
+
+    .about-section h1 {
+        font-size: 80px;
+        padding-left: 100px;
+        padding-top: 20px;
+
+    }
+
+    .about-section img {
+     align-self: right;
+    }
+
+    .about-section p {
+        max-width: 600px;
+        font-size: 100%;
+        padding-left: 100px;
+    }
     
-}
-}
 
-
-
-/*-------- TABLET ---------->*/
-
-@media (max-width: 768px){
-
-.body {
-    margin: 0px;
-}
-    .homepage-header {
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    min-height:700px;
-    flex-direction: column;
-
+    .music-section,
+    .shows-section,
+    .contact-section {
+        padding-left: max(100px, calc((100vw - 1300px) / 2));
+        padding-right: max(100px, calc((100vw - 1300px) / 2));
+    }
 }
 
-.header-logo {
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    width: 150px;
 
-}
+/* =========================================================
+   REDUCE MOTION
+   Accessibility / user preference
+   ========================================================= */
 
-.main-nav {
-        flex-direction: column;
-        font-size: 20px;
-        margin-left: 220px;
-        margin-top: 87px;
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
     }
 
-.about-section {
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 50%;
-
-
-}
-
-.about-section h1 {
-    font-size: 50px;
-    padding-top:120%;
-    color:antiquewhite;
-}
-
-.about-section img {
-    position: absolute;
-    max-height: 60%;
-}
-
-.about-section p {
-    position: absolute;
-    padding-top: 140%;
-    font-size: 15px;
-    color:rgb(212, 202, 188);
-    font-family: "Fraunces";
-}
-
-.music-section h1 {
-    font-size: 50px;
-    padding-top:10%;
-    padding-left: 0px;
-    padding-bottom: 10%;
-    color:rgb(1, 84, 1);
-}
-
-.youtube-video {
-
-    max-height: 200px;
-    padding-left: 0px;
-    padding-top: 10px;
-
-}
-
-.shows-section {
-    font-size: 50px;
-    padding-top:0%;
-    padding-left: 0px;
-}
-
-
-.contact-section h1 {
-    display: block;
-    text-align: center;
-    font-size: 30px;
-
-}
-.contact-section a {
-    display: block;
-    text-align: center;
-    font-size: 20px;
-}
-}
-
-/*-------- MOBILE LARGE ---------->*/
-
-@media (max-width: 425px) {
-    .homepage-header {
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    min-height:400px;
-    flex-direction: column;
-
-}
-
-.main-nav{
-    font-size: 20px;
-}
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
