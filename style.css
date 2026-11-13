@@ -596,4 +596,42 @@ p {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+
+   /* NAVIGATION */
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: flex-end;
+        align-items: center;
+
+        flex-wrap: nowrap;
+
+        gap: clamp(2px, 0.7vw, 5px);
+
+        padding: 5px 0 0 0;
+        margin: 0;
+
+        font-family: "phantasmagoria";
+        font-size: clamp(8px, 2.5vw, 12px);
+
+        white-space: nowrap;
+
+        animation: expand 1.2s ease-out;
+    }
+
+    .main-nav a {
+        color: black;
+    }
+
+    .separator {
+        color: black;
+    }
+
+    
+
+}
+}
+
 }
