@@ -188,13 +188,15 @@ p {
 
     margin-top: 45px;
 
+   marign-bottom: 20px;
+
     animation: expand 1.2s ease-out;
 }
 
 .about-section p {
     max-width: 700px;
 
-    margin: 0px auto 0;
+    margin: 35px auto 0;
 
     color: rgb(212, 202, 188);
 
